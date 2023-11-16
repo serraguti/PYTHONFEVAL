@@ -1,0 +1,11 @@
+import boto3
+
+#RECUPERAMOS EL SERVICIO SQS DE AWS
+sqs = boto3.resource("sqs")
+
+#RECUPERAMOS TODAS LAS COLAS EXISTENTES, PARA ELLO
+#TENEMOS UN METODO LLAMADO queues.all() QUE NOS DEVUELVE
+#TODOs EL LISTADO
+#REALIZAMOS UN BUCLE PARA EL RECORRIDO
+for cola in sqs.queues.all():
+    print(cola.url)

@@ -1,0 +1,17 @@
+#IMPORTAMOS LA LIBRERIA DE SQS
+import boto3
+
+#RECUPERAMOS EL SERVICIO SQS
+sqs = boto3.resource("sqs")
+
+#VAMOS A CREAR UNA NUEVA COLA DE MENSAJES
+#POR DEFECTO CREARA UNA COLA STANDARD
+#PEDIMOS AL USUARIO EL NOMBRE DE LA COLA A CREAR
+print("Introduzca nombre de QUEUE")
+nombrecola = input()
+#DEBEMOS INDICAR EL NOMBRE DE LA COLA A CREAR
+#MEDIANTE QueueName
+queue = sqs.create_queue(QueueName=nombrecola)
+print("QUEUE Creada!!!")
+#PODEMOS PINTAR ALGUNOS ATRIBUTOS DE LA COLA
+print(queue.url)
