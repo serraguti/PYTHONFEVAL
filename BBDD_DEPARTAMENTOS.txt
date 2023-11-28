@@ -1,0 +1,9 @@
+CREATE TABLE "DEPT"
+("DEPT_NO" int primary key not null,
+"DNOMBRE" char(50),
+"LOC" char(50));
+
+insert into "DEPT" values(10,'DISNEYLAND','PARIS');
+insert into "DEPT" values(20,'TERRA MITICA','BENIDORM');
+insert into "DEPT" values(30,'PORT AVENTURA','TABARNIA');
+insert into "DEPT" values(40,'PARQUE WARNER','MADRID');
